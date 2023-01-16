@@ -20,7 +20,7 @@ async def handler(event):
         await event.reply(f"{random.choice(yeni_user)}")
 #start
         
-xaos_start = b"MƏLUMAT YOXDU"
+xaos_start = "MƏLUMAT YOXDU"
 @xaos.on(events.NewMessage(pattern='(?i)/start+'))
 async def yeni_mesaj(event: events.NewMessage.Event):
     await event.reply(f"{random.choice(start)}")
