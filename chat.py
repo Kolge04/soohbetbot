@@ -2,12 +2,21 @@ import random
 import os
 import logging
 import asyncio
-import base64
-import TelegramClient
-from kelime_bot.mesaj import salam, necesen, sagol, getdim, geldim, sesizKOLGE, ban, emoji1, emoji2, fed, niye, ne, hay, mal, can, balam, xos, hara, gel, gordum, taım
-from kelime_bot.bot import yeni_user, start, info, oyun, zer, bol, ftop, btop, carx, ox
-from telethon import events, Button
-import random
+from telethon import Button
+from telethon.sessions import StringSession
+from telethon.tl.types import ChannelParticipantsAdmins
+from telethon import TelegramClient, events
+from kelime_bot.mesaj import taım, azz, enn, trrr, russ, fra
+from kelime_bot.bot import yeni_user, ınfom
+
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(name)s - [%(levelname)s] - %(message)s'
+)
+LOGGER = logging.getLogger(__name__)
+
+
+
 
 api_id = int(os.environ.get("APP_ID"))
 api_hash = os.environ.get("API_HASH")
