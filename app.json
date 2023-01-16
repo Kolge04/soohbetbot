@@ -1,1 +1,23 @@
+{
+  "name": "chatbot",
+  "logo":"https://telegra.ph/file/133b9125da464d1db6fca.jpg",
+  "description": "𝐊 𝐎 𝐋 𝐆 Ə_𝐓 𝐀 𝐆 𝐆 𝐄 𝐑 Bot ilə rahat şəkildə qruplardakı üuələri tağ edə bilərsiz.",
+  "env": {
+    "TOKEN": {
+      "description": "@botfather dan aldiğınız TOKEN i daxil edin.",
+      "value": ""
+    },
+    "APP_ID": {
+      "description": "APİ_İD i daxil edin (my.telegram.org).",
+      "value": ""
+    },
+    "API_HASH": {
+      "description": "APİ_HASH ı daxil edin (my.telegram.org).",
+      "value": ""
+    }
+  },
 
+  "buildpacks": [{
+    "url": "https://github.com/heroku/heroku-buildpack-python.git"
+  }]
+}
