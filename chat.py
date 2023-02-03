@@ -25,10 +25,6 @@ xaos = TelegramClient('client', api_id, api_hash).start(bot_token=bot_token)
 
 
 
-@xaos.on(events.NewMessage(pattern='(?i)/sehid+'))
-async def yeni_mesaj(event: events.NewMessage.Event):
-    await event.reply_text((await random_line('kelime_bot/Şehid.txt')))
- 
 
 # Yeni istifadəçi mesajı
 @xaos.on(events.ChatAction)
@@ -43,8 +39,7 @@ async def yeni_mesaj(event: events.NewMessage.Event):
     await event.reply(f"{random.choice(start)}",
                       buttons=(
 			    
-		              [Button.url('➕ ℚℝ𝕌ℙ𝔸 𝔼𝕃𝔸𝕍𝔼 𝔼𝕋 ➕', 'https://t.me/XAOS_Chatbot?startgroup=a')]
-			      [Button.url('➕ ℚℝ𝕌ℙ𝔸 𝔼𝕃𝔸𝕍𝔼 𝔼𝕋 ➕', 'https://t.me/XAOS_Chatbot?startgroup=a')],
+		              [Button.url('➕ ℚℝ𝕌ℙ𝔸 𝔼𝕃𝔸𝕍𝔼 𝔼𝕋 ➕', 'https://t.me/XAOS_Chatbot?startgroup=a')],			      
                     ),
                     link_preview=False
 		   )
@@ -54,7 +49,14 @@ async def yeni_mesaj(event: events.NewMessage.Event):
 
 @xaos.on(events.NewMessage(pattern='(?i)/xaosinfo+'))
 async def yeni_mesaj(event: events.NewMessage.Event):
-    await event.reply(f"{random.choice(info)}")
+    await event.reply(f"{random.choice(info)}",
+		      buttons=(
+			    
+		              [Button.url('➕ ℚℝ𝕌ℙ𝔸 𝔼𝕃𝔸𝕍𝔼 𝔼𝕋 ➕', 'https://t.me/XAOS_Chatbot?startgroup=a')],
+			      [Button.url('👨‍💻 OWNER', 'https://t.me/sesizKOOGE')],
+                    ),
+                    link_preview=False
+		   )
 
  #oyunlar   
     
