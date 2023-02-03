@@ -25,7 +25,10 @@ xaos = TelegramClient('client', api_id, api_hash).start(bot_token=bot_token)
 
 
 
-
+@xaos.on(events.NewMessage(pattern='(?i)/sehid+'))
+async def yeni_mesaj(event: events.NewMessage.Event):
+    await event.reply_text((await random_line('kelime_bot/Şehid.txt')))
+ 
 
 # Yeni istifadəçi mesajı
 @xaos.on(events.ChatAction)
