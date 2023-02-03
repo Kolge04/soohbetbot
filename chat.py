@@ -49,7 +49,7 @@ async def yeni_mesaj(event: events.NewMessage.Event):
                       
      
 #info
-@client.on(events.callbackquery.CallbackQuery(data="info"))
+@xaos.on(events.callbackquery.CallbackQuery(data="info"))
 @xaos.on(events.NewMessage(pattern='(?i)/xaosinfo+'))
 async def yeni_mesaj(event: events.NewMessage.Event):
     await event.reply(f"{random.choice(info)}",
