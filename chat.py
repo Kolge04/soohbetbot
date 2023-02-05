@@ -235,7 +235,7 @@ async def yeni_mesaj(event: events.NewMessage.Event):
 async def yeni_mesaj(event: events.NewMessage.Event):
     await event.reply(f"{random.choice(taım)}")
 
-@xaos.on(events.NewMessage(pattern='(?i)pp+"))
+@xaos.on(events.NewMessage(pattern='(?i)pp+'))
 async def yeni_mesaj(event: events.NewMessage.Event):
     await event.photo(f"{random.choice(pps)}")
         
