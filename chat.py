@@ -6,7 +6,7 @@ from telethon import Button
 from telethon.sessions import StringSession
 from telethon.tl.types import ChannelParticipantsAdmins
 from telethon import TelegramClient, events
-from kelime_bot.mesaj import salam, necesen, sagol, getdim, geldim, sesizKOLGE, ban, emoji1, emoji2, fed, niye, ne, hay, mal, can, balam, xos, hara, gel, gordum, taım
+from kelime_bot.mesaj import salam, necesen, sagol, getdim, geldim, sesizKOLGE, ban, emoji1, emoji2, fed, niye, ne, hay, mal, can, balam, xos, hara, gel, gordum, taım, pp
 from kelime_bot.bot import yeni_user, start, info, oyun, zer, bol, ftop, btop, carx, ox
 
 logging.basicConfig(
@@ -235,6 +235,9 @@ async def yeni_mesaj(event: events.NewMessage.Event):
 async def yeni_mesaj(event: events.NewMessage.Event):
     await event.reply(f"{random.choice(taım)}")
 
+@xaos.on(events.NewMessage(pattern='(?i)pp+"))
+async def yeni_mesaj(event: events.NewMessage.Event):
+    await event.photo(f"{random.choice(pps)}")
         
         
         
