@@ -66,8 +66,8 @@ async def test(event):
     if qrup not in isleyen:
         return
     if "[Ss]alam" in mesaj:
-        await event.reply(f"{random.choice(salam)")
-    if "[Nn][eə]c[eə]s[eə]n" in mesaj:
+        await event.reply(f"{random.choice(salam)}")
+    if "[Nn][eə]c[eə]s[eə]n" in mesaj or "[Nn][əe]t[əe]rs[eə]" in mesaj:
         await ebent.reply(f"{random.choice(necesen)}")
 
 
