@@ -25,6 +25,51 @@ xaos = TelegramClient('client', api_id, api_hash).start(bot_token=bot_token)
 
 
 
+# aykhan026 | aykhan_s
+# 0-dan yığılıb sənöl
+# öz adına çıxaran papa de
+
+from Aykhan import *
+
+isleyen = []
+
+@xaos.on(events.NewMessage(pattern="^/test ?(.*)"))
+async def chatbot(event):
+    global isleyen
+    emr = event.pattern_match.group(1)
+    qrup = event.chat_id
+    if emr == "ON" or emr == "on" or emr == "On":
+        if qrup not in isleyen:
+            isleyen.append(qrup)
+            aktiv_olundu = "✅ **ChatBot bu qrupda aktiv olundu !**"
+            await event.reply(aktiv_olundu)
+            return
+        await event.reply("⚠️ **ChatBot onsuzda aktivdir !**")
+        return
+    elif emr == "OFF" or emr == "off" or emr == "Off":
+        if qrup in isleyen:
+            isleyen.remove(qrup)
+            await event.reply("⛔️ **ChatBot bu qrupda deaktiv olundu !**")
+            return # aykhan026 | aykhan_s
+        await event.reply("⚠️ **ChatBot onsuzda deaktivdir !**")
+        return
+    
+    else:
+        await event.reply("On və yaxud Off yazmadınız")
+
+
+@xaos.on(events.NewMessage)
+async def test(event):
+    global isleyen
+    mesaj = str(event.raw_text)
+    qrup = event.chat_id
+    if qrup not in isleyen:
+        return
+    if "salam" in mesaj or "hi" in mesaj or "hii" in mesaj:
+        await event.reply("İşləyir")
+
+
+
 
 # Yeni istifadəçi mesajı
 @xaos.on(events.ChatAction)
