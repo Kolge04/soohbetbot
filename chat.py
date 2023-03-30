@@ -33,7 +33,7 @@ xaos = TelegramClient('client', api_id, api_hash).start(bot_token=bot_token)
 
 isleyen = []
 
-@xaos.on(events.NewMessage(pattern="^[.\!]chatbot ?(.*)"))
+@xaos.on(events.NewMessage(pattern="^/chatbot ?(.*)"))
 async def chatbot(event):
     global isleyen
     emr = event.pattern_match.group(1)
@@ -59,13 +59,13 @@ async def chatbot(event):
 
 
 @xaos.on(events.NewMessage)
-async def test(event):
+async def chatbot(event):
     global isleyen
     mesaj = str(event.raw_text)
     qrup = event.chat_id
     if qrup not in isleyen:
         return
-    if "[Ss]alam" in mesaj:
+    if "Salam" in mesaj or "salam" in mesaj.:
         await event.reply(f"{random.choice(salam)}")
     if "[Nn][eə]c[eə]s[eə]n" in mesaj or "[Nn][əe]t[əe]rs[eə]" in mesaj:
         await ebent.reply(f"{random.choice(necesen)}")
@@ -218,7 +218,7 @@ async def yeni_mesaj(event: events.NewMessage.Event):
     await event.reply(f"{random.choice(niye)}")
 
     
-@xaos.on(events.NewMessage(pattern='(?i)ne+'))
+@xaos.on(events.NewMessage(pattern='(?i)e+'))
 @xaos.on(events.NewMessage(pattern='(?i)nə+'))
 @xaos.on(events.NewMessage(pattern='(?i)what+'))
 async def yeni_mesaj(event: events.NewMessage.Event):
