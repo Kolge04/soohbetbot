@@ -33,7 +33,7 @@ xaos = TelegramClient('client', api_id, api_hash).start(bot_token=bot_token)
 
 isleyen = []
 
-@xaos.on(events.NewMessage(pattern="^/test ?(.*)"))
+@xaos.on(events.NewMessage(pattern="^[.\!]chatbot ?(.*)"))
 async def chatbot(event):
     global isleyen
     emr = event.pattern_match.group(1)
@@ -41,21 +41,21 @@ async def chatbot(event):
     if emr == "ON" or emr == "on" or emr == "On":
         if qrup not in isleyen:
             isleyen.append(qrup)
-            aktiv_olundu = "✅ **ChatBot bu qrupda aktiv olundu !**"
+            aktiv_olundu = "✅ **ChatBot Qrupda Aktiv Olundu !**"
             await event.reply(aktiv_olundu)
             return
-        await event.reply("⚠️ **ChatBot onsuzda aktivdir !**")
+        await event.reply("⚠️ **ChatBot Hal-hazırda Qrupda Aktivdir !**")
         return
     elif emr == "OFF" or emr == "off" or emr == "Off":
         if qrup in isleyen:
             isleyen.remove(qrup)
-            await event.reply("⛔️ **ChatBot bu qrupda deaktiv olundu !**")
+            await event.reply("⛔️ **ChatBot Qrupda Deaktiv Olundu !**")
             return # aykhan026 | aykhan_s
-        await event.reply("⚠️ **ChatBot onsuzda deaktivdir !**")
+        await event.reply("⚠️ **ChatBot Hal-Hazırda Deaktivdir !**")
         return
     
     else:
-        await event.reply("On və yaxud Off yazmadınız")
+        await event.reply("Chatbot u Aktiv Edmək Üçün On və  Off yazın")
 
 
 @xaos.on(events.NewMessage)
@@ -65,9 +65,10 @@ async def test(event):
     qrup = event.chat_id
     if qrup not in isleyen:
         return
-    if "salam" in mesaj or "hi" in mesaj or "hii" in mesaj:
-        await event.reply("İşləyir")
-
+    if "[Ss]alam" in mesaj:
+        await event.reply(f"{random.choice(salam)")
+    if "[Nn][eə]c[eə]s[eə]n" in mesaj:
+        await ebent.reply(f"{random.choice(necesen)}")
 
 
 
@@ -142,13 +143,13 @@ async def yeni_mesaj(event: events.NewMessage.Event):
 
 
 
-@xaos.on(events.NewMessage(pattern='(?i)salam+'))
+@xaos.on(events.NewMessage(pattern='(?i)lam+'))
 async def yeni_mesaj(event: events.NewMessage.Event):
     await event.reply(f"{random.choice(salam)}")
 
-@xaos.on(events.NewMessage(pattern='(?i)necəsən+'))
-@xaos.on(events.NewMessage(pattern='(?i)necesen+'))
-@xaos.on(events.NewMessage(pattern='(?i)nətərsən+'))
+@xaos.on(events.NewMessage(pattern='(?i)ecəsən+'))
+@xaos.on(events.NewMessage(pattern='(?i)ecesen+'))
+@xaos.on(events.NewMessage(pattern='(?i)ətərsən+'))
 async def yeni_mesaj(event: events.NewMessage.Event):
     await event.reply(f"{random.choice(necesen)}")
 
