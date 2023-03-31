@@ -6,7 +6,7 @@ from telethon import Button
 from telethon.sessions import StringSession
 from telethon.tl.types import ChannelParticipantsAdmins
 from telethon import TelegramClient, events
-from kelime_bot.mesaj import salam, necesen, sagol, getdim, geldim, sesizKOLGE, ban, emoji1, emoji2, fed, niye, ne, hay, mal, can, balam, xos, hara, gel, gordum, taım, pp
+from kelime_bot.mesaj import salam, necesen, getdim, geldim, sesizKOLGE, ban, emoji1, emoji2, fed, niye, ne, hay, mal, can, balam, xos, hara, gel, gordum, taım, pp
 from kelime_bot.bot import yeni_user, start, info
 
 logging.basicConfig(
@@ -120,7 +120,7 @@ async def chatbot(event):
     if "necesen" in mesaj or "necəsən" in mesaj or "netersen" in mesaj or "nətərsən" in mesaj:
         await event.reply(f"{random.choice(necesen)}")
     if "sağol" in mesaj or "sagol" in mesaj or "by" in mesaj:
-	await event.reply(f"{random.choice(sagol)}")
+	await event.reply(f"Qırıla bilərsən")
     if "getdim" in mesaj or "getdım" in mesaj or "gedirem" in mesaj or "gedırem" in mesaj or "getdim" in mesaj or "getdım" in mesaj:
 	await event.reply(f"{random.choice(getdim)}")
     if "gəldim" in mesaj or "gəldım" in mesaj or "geldim" in mesaj:
