@@ -119,48 +119,7 @@ async def chatbot(event):
         await event.reply(f"{random.choice(salam)}")
     if "necesen" in mesaj or "necəsən" in mesaj or "netersen" in mesaj or "nətərsən" in mesaj:
         await event.reply(f"{random.choice(necesen)}")
-    if "getdim" in mesaj or "getdım" in mesaj or "gedirem" in mesaj or "gedırem" in mesaj or "getdim" in mesaj or "getdım" in mesaj:
-	await event.reply(f"{random.choice(getdim)}")
-    if "gəldim" in mesaj or "gəldım" in mesaj or "geldim" in mesaj:
-	await event.reply(f"{random.choice(geldim)}")
-    if "@sesizKOLGE" in mesaj or "kolge" in mesaj or "kölgə" in mesaj:
-	await event.reply(f"{random.choice(sesizKOLGE)}")
-    if "/ban" in mesaj or "/kick" in mesaj or "/mute" in mesaj or "/fban" in mesaj:
-	await event.reply(f"{random.choice(ban)}") 
-    if "🙄" in mesaj or "🙄🙄" in mesaj or "🙄🤲" in mesaj:
-	await event.reply(f"{random.choice(emoji1)}")
-    if "😂" in mesaj or "🤣" in mesaj or "😅" in mesaj or "😄" in mesaj:
-	await event.reply(f"{random.choice(emoji2)}")
-    if "xaos" in mesaj or "Xaos" in mesaj or "XAOS" in mesaj:
-	await event.reply(f"{random.choice(fed)}")
-    if "niye" in mesaj or "niyə" in mesaj or "nıye" in mesaj:
-	await event.reply(f"{random.choice(niye)}")
-    if "ne" in mesaj or "nə" in mesaj or "what" in mesaj:
-	await event.reply(f"{random.choice(ne)}")
-    if "hay" in mesaj or "hiy" in mesaj or "hıy" in mesaj:
-	await event.reply(f"{random.choice(hay)}")
-    if "mal" in mesaj or "qoyun" in mesaj or "heyvan" in mesaj:
-	await event.reply(f"{random.choice(mal)}")
-    if "can" in mesaj or "haycan" in mesaj or "uşş" in mesaj or "uss"in mesaj or "uş" in mesaj:
-	await ebent.reply(f"{random.choice(can)}")
-    if "bal" in event or "quzum" in mesaj or "canım" in mesaj:
-	await event.reply(f"{random.choice(bal)}")
-    if "xoş" in mesaj or "xos" in mesaj or "gününə" in mesaj or "gunune" in mesaj:
-	await event.reply(f"{random.choice(xos)}")
-    if "hara" in mesaj or "havaq" in mesaj or "hansı" in mesaj:
-	await event.reply(f"{random.choice(hara)}")
-    if "gel" in mesaj or "gəl" in mesaj or "gelde" in mesaj or "gəldə" in mesaj:
-	await event.reply(f"{random.choice(gel)}")
-    if "gördüm" in mesaj or "gordum" in mesaj or "gordun" in mesaj or "gördün" in mesaj:
-	await event.reply(f"{random.choice(gordum)}")
-    if "tema" in mesaj or "/tema" in mesaj or ".tema" in mesaj:
-	await event.reply(f"{random.choice(tema)}")
-    if "pps" in mesaj or "/pps" in mesaj or ".pps" in mesaj:
-	await event.reply(f"{random.choice(pp)}")
-	
-	
-	
-        
+    
         
 xaos_run = xaos_start.decode("utf8")
 print(">> Chat bot uğurla işləyir ♿ <<")
