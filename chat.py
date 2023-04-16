@@ -117,7 +117,7 @@ async def chatbot(event):
         return
     if "Salam" in mesaj or "salam" in mesaj:
         await event.reply(f"{random.choice(salam)}")
-    if "necesen" in mesaj or "necəsən" in mesaj or "netersen" in mesaj or "nətərsən" in mesaj:
+    if "necesen" in mesaj or "necəsən" in mesaj or "netersen" in mesaj or "nətərsən" in mesaj or "Netersen" in mesaj:
         await event.reply(f"{random.choice(necesen)}")
     
         
