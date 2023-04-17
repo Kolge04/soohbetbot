@@ -6,10 +6,10 @@ from telethon import Button
 from telethon.sessions import StringSession
 from telethon.tl.types import ChannelParticipantsAdmins
 from telethon import TelegramClient, events
-from kelime_bot.mesaj import salam, necesen, getdim, geldim, sesizKOLGE, ban, emoji1, emoji2, fed, niye, ne, hay, mal, can, balam, xos, hara, gel, gordum, taım, pp
-from kelime_bot.bot import yeni_user, start, info
+from kelime_bot.mesaj import salam, necesen, getdim, geldim, sesizKOLGE, ban, emoji1, emoji2, fed, niye, ne, hay, mal, 
 
-logging.basicConfig(
+logging.basicConfig(can, balam, xos, hara, gel, gordum, taım, pp
+from kelime_bot.bot import yeni_user, start, info
     level=logging.INFO,
     format='%(name)s - [%(levelname)s] - %(message)s'
 )
@@ -119,7 +119,63 @@ async def chatbot(event):
         await event.reply(f"{random.choice(salam)}")
     if "necesen" in mesaj or "necəsən" in mesaj or "netersen" in mesaj or "nətərsən" in mesaj or "Netersen" in mesaj:
         await event.reply(f"{random.choice(necesen)}")
-    
+    if "xos" in mesaj or "Xos" in mesaj:
+        await event.reply(f"{random.choice(xos)}")
+    if "Salam" in mesaj or "salam" in mesaj:
+        await event.reply(f"{random.choice(salam)}")
+    if "necesen" in mesaj or "necəsən" in mesaj or "netersen" in mesaj or "nətərsən" in mesaj or "Netersen" in mesaj:
+        await event.reply(f"{random.choice(necesen)}")
+    if "xos" in mesaj or "Xos" in mesaj:
+        await event.reply(f"{random.choice(xos)}")
+    if "Salam" in mesaj or "salam" in mesaj:
+        await event.reply(f"{random.choice(salam)}")
+    if "necesen" in mesaj or "necəsən" in mesaj or "netersen" in mesaj or "nətərsən" in mesaj or "Netersen" in mesaj:
+        await event.reply(f"{random.choice(necesen)}")
+    if "xos" in mesaj or "Xos" in mesaj:
+        await event.reply(f"{random.choice(xos)}")
+    if "Salam" in mesaj or "salam" in mesaj:
+        await event.reply(f"{random.choice(salam)}")
+    if "necesen" in mesaj or "necəsən" in mesaj or "netersen" in mesaj or "nətərsən" in mesaj or "Netersen" in mesaj:
+        await event.reply(f"{random.choice(necesen)}")
+    if "xos" in mesaj or "Xos" in mesaj:
+        await event.reply(f"{random.choice(xos)}")
+    if "Salam" in mesaj or "salam" in mesaj:
+        await event.reply(f"{random.choice(salam)}")
+    if "necesen" in mesaj or "necəsən" in mesaj or "netersen" in mesaj or "nətərsən" in mesaj or "Netersen" in mesaj:
+        await event.reply(f"{random.choice(necesen)}")
+    if "xos" in mesaj or "Xos" in mesaj:
+        await event.reply(f"{random.choice(xos)}")
+    if "Salam" in mesaj or "salam" in mesaj:
+        await event.reply(f"{random.choice(salam)}")
+    if "necesen" in mesaj or "necəsən" in mesaj or "netersen" in mesaj or "nətərsən" in mesaj or "Netersen" in mesaj:
+        await event.reply(f"{random.choice(necesen)}")
+    if "xos" in mesaj or "Xos" in mesaj:
+        await event.reply(f"{random.choice(xos)}")
+    if "Salam" in mesaj or "salam" in mesaj:
+        await event.reply(f"{random.choice(salam)}")
+    if "necesen" in mesaj or "necəsən" in mesaj or "netersen" in mesaj or "nətərsən" in mesaj or "Netersen" in mesaj:
+        await event.reply(f"{random.choice(necesen)}")
+    if "xos" in mesaj or "Xos" in mesaj:
+        await event.reply(f"{random.choice(xos)}")
+    if "Salam" in mesaj or "salam" in mesaj:
+        await event.reply(f"{random.choice(salam)}")
+    if "necesen" in mesaj or "necəsən" in mesaj or "netersen" in mesaj or "nətərsən" in mesaj or "Netersen" in mesaj:
+        await event.reply(f"{random.choice(necesen)}")
+    if "xos" in mesaj or "Xos" in mesaj:
+        await event.reply(f"{random.choice(xos)}")
+    if "Salam" in mesaj or "salam" in mesaj:
+        await event.reply(f"{random.choice(salam)}")
+    if "necesen" in mesaj or "necəsən" in mesaj or "netersen" in mesaj or "nətərsən" in mesaj or "Netersen" in mesaj:
+        await event.reply(f"{random.choice(necesen)}")
+    if "xos" in mesaj or "Xos" in mesaj:
+        await event.reply(f"{random.choice(xos)}")
+	
+	
+	
+	
+	
+	
+	
         
 xaos_run = xaos_start.decode("utf8")
 print(">> Chat bot uğurla işləyir ♿ <<")
