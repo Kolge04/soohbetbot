@@ -7,7 +7,7 @@ from telethon.sessions import StringSession
 from telethon.tl.types import ChannelParticipantsAdmins
 from telethon import TelegramClient, events
 from kelime_bot.mesaj import salam, necesen, getdim, geldim, sesizKOLGE, ban, emoji1, emoji2, fed, niye, ne, hay, mal, can, balam, xos, hara, gel, gordum, taım, pp
-from kelime_bot.bot import yeni_user, start, info, bot
+from kelime_bot.bot import yeni_user, start, info
 logging.basicConfig(
     level=logging.INFO,
     format='%(name)s - [%(levelname)s] - %(message)s'
@@ -47,7 +47,7 @@ async def yeni_mesaj(event: events.NewMessage.Event):
  
 @xaos.on(events.callbackquery.CallbackQuery(data="start"))
 async def yeni_mesaj(event: events.NewMessage.Event):
-    await event.reply(f"{random.choice(start)}",
+    await event.reply(f"Botun işləməsi üçün /chatbot yazin",
                       buttons=(
 			    
 		              [Button.url('➕ ℚℝ𝕌ℙ𝔸 𝔼𝕃𝔸𝕍𝔼 𝔼𝕋 ➕', 'https://t.me/XAOS_Chatbot?startgroup=a')],
