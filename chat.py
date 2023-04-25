@@ -47,7 +47,7 @@ async def yeni_mesaj(event: events.NewMessage.Event):
  
 @xaos.on(events.callbackquery.CallbackQuery(data="start"))
 async def yeni_mesaj(event: events.NewMessage.Event):
-    await event.reply(f"Botun işləməsi üçün /chatbot yazin",
+    await event.reply(f"{random.choice(start)}",
                       buttons=(
 			    
 		              [Button.url('➕ ℚℝ𝕌ℙ𝔸 𝔼𝕃𝔸𝕍𝔼 𝔼𝕋 ➕', 'https://t.me/XAOS_Chatbot?startgroup=a')],
@@ -81,7 +81,7 @@ async def handler(event):
 @xaos.on(events.NewMessage(pattern='(?i)bot+'))
 @xaos.on(events.NewMessage(pattern='(?i)chatbot+'))
 async def yeni_mesaj(event: events.NewMessage.Event):
-    await event.reply(f"{random.choice(bot)}")
+    await event.reply(f"Botun işləməsi üçün /chatbot yazin")
 
 
 isleyen = []
