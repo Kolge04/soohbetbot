@@ -22,6 +22,11 @@ necesen = (
 
 
 
+bot = (
+"Botun işləməsi üçün /chatbot yazin"
+"/chatbot yaz"
+)
+
 sagol = (
 "Salam Sağol",
 "Hara gedsən",
