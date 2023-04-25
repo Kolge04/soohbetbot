@@ -120,58 +120,44 @@ async def chatbot(event):
         await event.reply(f"{random.choice(necesen)}")
     if "Getdim" in mesaj or "getdim" in mesaj or "getdım" in mesaj:
         await event.reply(f"{random.choice(getdim)}")
-    if "Geldim" in mesaj or "geldim" in mesaj or "geldım" in mesaj "Geldım" in mesaj:
+    if "Geldim" in mesaj or "geldim" in mesaj or "geldım" in mesaj or "Geldım" in mesaj:
         await event.reply(f"{random.choice(geldim)}")
     if "@sesızKOLGE" in mesaj or "kolge" in mesaj or "Kolge" in mesaj:
         await event.reply(f"{random.choice(sesizKOLGE)}")
-    if "" in mesaj or "" in mesaj:
-        await event.reply(f"{random.choice()}")
-    if "" in mesaj or "" in mesaj or "" in mesaj or "" in mesaj or "" in mesaj:
-        await event.reply(f"{random.choice()}")
-    if "" in mesaj or "" in mesaj:
-        await event.reply(f"{random.choice()}")
-    if "" in mesaj or "" in mesaj:
-        await event.reply(f"{random.choice(salam)}")
-    if "" in mesaj or "" in mesaj or "" in mesaj or "" in mesaj or "" in mesaj:
-        await event.reply(f"{random.choice()}")
-    if "" in mesaj or "" in mesaj:
-        await event.reply(f"{random.choice()}")
-    if "" in mesaj or "" in mesaj:
-        await event.reply(f"{random.choice()}")
-    if "" in mesaj or "" in mesaj or "" in mesaj or "" in mesaj or "" in mesaj:
-        await event.reply(f"{random.choice()}")
-    if "" in mesaj or "" in mesaj:
-        await event.reply(f"{random.choice()}")
-    if "" in mesaj or "" in mesaj:
-        await event.reply(f"{random.choice(salam)}")
-    if "" in mesaj or "" in mesaj or "" in mesaj or "" in mesaj or "" in mesaj:
-        await event.reply(f"{random.choice()}")
-    if "" in mesaj or "" in mesaj:
-        await event.reply(f"{random.choice()}")
-    if "" in mesaj or "" in mesaj:
-        await event.reply(f"{random.choice()}")
-    if "" in mesaj or "" in mesaj or "" in mesaj or "" in mesaj or "" in mesaj:
-        await event.reply(f"{random.choice()}")
-    if "" in mesaj or "" in mesaj:
-        await event.reply(f"{random.choice()}")
-    if "" in mesaj or "" in mesaj:
-        await event.reply(f"{random.choice()}")
-    if "" in mesaj or "" in mesaj or "" in mesaj or "" in mesaj or "" in mesaj:
-        await event.reply(f"{random.choice()}")
-    if "" in mesaj or "" in mesaj:
-        await event.reply(f"{random.choice()}")
-    if "" in mesaj or "" in mesaj:
-        await event.reply(f"{random.choice()}")
-    if "" in mesaj or "" in mesaj or "" in mesaj or "" in mesaj or "" in mesaj:
-        await event.reply(f"{random.choice()}")
-    if "" in mesaj or "" in mesaj:
-        await event.reply(f"{random.choice()}")
-	
-	
-	
-	
-	
-	
+    if "Xaos" in mesaj or "xaos" in mesaj:
+        await event.reply(f"{random.choice(fed)}")
+    if "Ban" in mesaj or "ban" in mesaj or "/gban" in mesaj or "gban" in mesaj in mesaj or "/ban" in mesaj:
+        await event.reply(f"{random.choice(ban)}")
+    if "😁" in mesaj or "😬" in mesaj or "😄" in mesaj or "🥶" in mesaj or "😌" in mesaj:
+        await event.reply(f"{random.choice(emoji1)}")
+    if "🤣" in mesaj or "😅" in mesaj in mesaj or "😂" in mesaj or "😄" in mesaj:
+        await event.reply(f"{random.choice(emoji2)}")
+    if "Niye" in mesaj or "niye" in mesaj or "Niyə" in mesaj or "niyə" in mesaj:
+        await event.reply(f"{random.choice(niye)}")
+    if "Nə" in mesaj or "nə" in mesaj or "Ne" in mesaj or "ne" in mesaj or "what" in mesaj in mesaj or "What" in mesaj:
+        await event.reply(f"{random.choice(ne)}")
+    if "Hay" in mesaj or "hay" in mesaj in mesaj or "haay" in mesaj:
+        await event.reply(f"{random.choice(hay)}")
+    if "Mal" in mesaj or "mal" in mesaj in mesaj or "Qoyun" in mesaj or "qoyun" in mesaj:
+        await event.reply(f"{random.choice(mal)}")
+    if "Can" in mesaj or "can" in mesaj or "Haycan" in mesaj or "haycan" in mesaj or "uss" in mesaj:
+        await event.reply(f"{random.choice(can)}")
+    if "Balam" in mesaj or "balam" in mesaj:
+        await event.reply(f"{random.choice(balam)}")
+    if "xos" in mesaj or "Xos" in mesaj in mesaj or "Xoş" in mesaj or "xoş" in mesaj:
+        await event.reply(f"{random.choice(xos)}")
+    if "Hara" in mesaj or "hara" in mesaj or "haraya" in mesaj or "Haraya" in mesaj or "haraki" in mesaj:
+        await event.reply(f"{random.choice(hara)}")
+    if "Gəl" in mesaj or "gəl" in mesaj or "Gel" in mesaj or "gel" in mesaj:
+        await event.reply(f"{random.choice(gel)}")
+    if "Gördüm" in mesaj or "gördüm" in mesaj or "Gordum" in mesaj or "gordum" in mesaj:
+        await event.reply(f"{random.choice(gordum)}")
+    if "info" in mesaj or "Info" in mesaj:
+        await event.reply(f"{random.choice(info)}")
+    if "tema" in mesaj or "Tema" in mesaj:
+        await event.reply(f"{random.choice(taim)}")  
+    if "pp" in mesaj or "PP" in mesaj:
+        await event.reply(f"{random.choice(pp)}")
 	
 
 	
