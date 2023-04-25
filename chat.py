@@ -6,7 +6,7 @@ from telethon import Button
 from telethon.sessions import StringSession
 from telethon.tl.types import ChannelParticipantsAdmins
 from telethon import TelegramClient, events
-from kelime_bot.mesaj import salam, necesen, getdim, geldim, sesizKOLGE, ban, emoji1, emoji2, fed, niye, ne, hay, mal, can, balam, xos, hara, gel, gordum, taım, pp
+from kelime_bot.mesaj import salam, necesen, getdim, geldim, sesizKOLGE, ban, emoji1, emoji2, fed, niye, ne, hay, mal, can, balam, xos, hara, gel, gordum, taım, pp, bot
 from kelime_bot.bot import yeni_user, start, info
 logging.basicConfig(
     level=logging.INFO,
@@ -78,7 +78,11 @@ async def handler(event):
         await event.reply(f"{random.choice(yeni_user)}")
         
 # Chatbot
- 
+@xaos.on(events.NewMessage(pattern='(?i)bot+'))
+@xaos.on(events.NewMessage(pattern='(?i)chatbot+'))
+async def yeni_mesaj(event: events.NewMessage.Event):
+    await event.reply(f"{random.choice(bot)}")
+
 
 isleyen = []
 
