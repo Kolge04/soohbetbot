@@ -105,7 +105,7 @@ async def bilgi(event):
 
     veriler = f"● {baslik} Grubu İçin Analizler\n\n👥 Üye Sayısı: {len(uyeler)}\n👻 Silinen Hesap Sayısı: {silinen}\n🤖 Bot Sayısı: {botlar}\n〽️ Grup İsmi: {baslik}\n🆔 Grup ID: {id}"
 
-   a = await event.reply("🔄 Analiz Ediliyor..")
+    a = await event.reply("🔄 Analiz Ediliyor..")
     await a.edit("🔄 Analiz Ediliyor..."
     await asyncio.slee(2)
     await a.edit("🔄 Analiz Ediliyor...")
