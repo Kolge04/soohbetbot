@@ -87,12 +87,12 @@ async def yeni_mesaj(event: events.NewMessage.Event):
 
 
 
-@client.on(events.NewMessage(pattern='/bilgi'))
+@client.on(events.NewMessage(pattern='/qrup'))
 async def bilgi(event):
     chat = await event.get_chat()
     id = event.chat_id
     sohbet = await client.get_entity(chat)
-    baslik = sohbet.title if sohbet.title else "Bilinmiyor.."
+    baslik = sohbet.title if sohbet.title else "Bilinmir.."
     silinen = 0
     botlar = 0
     async for user in event.client.iter_participants(event.chat_id):
@@ -103,20 +103,16 @@ async def bilgi(event):
 
     uyeler = await client.get_participants(sohbet)
 
-    veriler = f"● {baslik} Grubu İçin Analizler\n\n👥 Üye Sayısı: {len(uyeler)}\n👻 Silinen Hesap Sayısı: {silinen}\n🤖 Bot Sayısı: {botlar}\n〽️ Grup İsmi: {baslik}\n🆔 Grup ID: {id}"
+    veriler = f"● {baslik} Qrubu üçün Analizlər\n\n👥 User Sayı: {len(uyeler)}\n👻 Silinən Hesap Sayı: {silinen}\n🤖 Bot Sayı: {botlar}\n〽️ Qrup Adı: {baslik}\n🆔 Grup ID: {id}"
 
-    a = await event.reply("🔄 Analiz Ediliyor..")
-    await a.edit("🔄 Analiz Ediliyor..."
-    await asyncio.slee(2)
-    await a.edit("🔄 Analiz Ediliyor...")
-    await asyncio.slee(2)
-    await a.edit("🔄 Analiz Ediliyor..."
-    await asyncio.slee(2)
-    await a.edit("〽️ Sonuçlar Getiriliyor..\nGeliştirici: @uslanmazmurti")
-    await asyncio.slee(2)
+    a = await event.reply("🔄 GÖZLƏYİN ..")
+    await asyncio.sleep(2)
+    await a.edit("🔄  MƏLUMATLAR GƏTİRİLİR...")
+    await asyncio.sleep(2)
+    await a.edit("〽️ Məlumatlar gətrildi ...")
+    await asyncio.sleep(0.5)
     await client.send_message(id, veriler)
     await a.delete()
-
 
 
 
