@@ -87,33 +87,6 @@ async def yeni_mesaj(event: events.NewMessage.Event):
 
 
 
-@client.on(events.NewMessage(pattern='/qrup'))
-async def bilgi(event):
-    chat = await event.get_chat()
-    id = event.chat_id
-    sohbet = await client.get_entity(chat)
-    baslik = sohbet.title if sohbet.title else "Bilinmir.."
-    silinen = 0
-    botlar = 0
-    async for user in event.client.iter_participants(event.chat_id):
-        if user.deleted:
-            silinen += 1
-        elif user.bot:
-              botlar += 1
-
-    uyeler = await client.get_participants(sohbet)
-
-    veriler = f"● {baslik} Qrubu üçün Analizlər\n\n👥 User Sayı: {len(uyeler)}\n👻 Silinən Hesap Sayı: {silinen}\n🤖 Bot Sayı: {botlar}\n〽️ Qrup Adı: {baslik}\n🆔 Grup ID: {id}"
-
-    a = await event.reply("🔄 GÖZLƏYİN ..")
-    await asyncio.sleep(2)
-    await a.edit("🔄  MƏLUMATLAR GƏTİRİLİR...")
-    await asyncio.sleep(2)
-    await a.edit("〽️ Məlumatlar gətrildi ...")
-    await asyncio.sleep(0.5)
-    await client.send_message(id, veriler)
-    await a.delete()
-
 
 
 
