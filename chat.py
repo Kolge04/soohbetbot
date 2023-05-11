@@ -3,8 +3,9 @@ import os
 import logging
 import asyncio
 from telethon import Button
+
 from telethon.sessions import StringSession
-from pyrogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup
+from pyrogram.types import Message
 from pyrogram import Client, filters
 from telethon.tl.types import ChannelParticipantsAdmins
 from telethon import TelegramClient, events
@@ -73,7 +74,7 @@ async def yeni_mesaj(event: events.NewMessage.Event):
 
 QARSİLAMA = """
 
-✪ {msg.chat.title} ✪ 
+✪ {message.chat.title} ✪ 
 ┏────────────────✦
 ┗➣ ʙᴀɴ ꜱəʙəʙʟəʀɪ↴️
 ┗❏⚡️›sᴏ‌ʏüş┆ᴛəʜǫɪʀ🔞
@@ -83,14 +84,14 @@ QARSİLAMA = """
 
 ✦ ᴍəʟᴜᴍᴀᴛ ✦
 ✪━─━─━─━─━─━✪ 
-╭[️️ᴀᴅ]┣◉➨ {msg.from_user.mention}
+╭[️️ᴀᴅ]┣◉➨ {message.from_user.mention}
 ┣[️️ᴛ️️️️ᴀɢ ᴀᴅ‌]┣◉➨ @{message.from_user.username}
-┣[ᴛ️️ᴇʟᴇɢ‌ʀᴀᴍ ɪᴅ‌]┣◉➨ {msg.from_user.id}
+┣[ᴛ️️ᴇʟᴇɢ‌ʀᴀᴍ ɪᴅ‌]┣◉➨ {message.from_user.id}
 
 ╰➥ xᴏş ꜱöʜʙəᴛʟəʀ.
 ✪━─━─━─━─━─━✪
 
-╭──➤ {msg.from_use.mention}
+╭──➤ {message.from_use.mention}
 ╰❏ ᴜsᴇʀ ᴅᴀsɪᴍᴀ!
 
 """
@@ -100,7 +101,7 @@ QARSİLAMA = """
 
 
 @xaos.on_message(filters.new_chat_members)
-async def newuser(client, msg):
+async def newuser(client, message):
     chat_id = message.chat.id
     await message.reply_text(f"{QARSİLAMA}")
 	
