@@ -69,12 +69,36 @@ async def yeni_mesaj(event: events.NewMessage.Event):
 		   )
 
 
+QARSİLAMA = """
+
+✪ {msg.chat.title} ✪ 
+┏────────────────✦
+┗➣ ʙᴀɴ ꜱəʙəʙʟəʀɪ↴️
+┗❏⚡️›sᴏ‌ʏüş┆ᴛəʜǫɪʀ🔞
+┗❏⚡️›ʀᴇᴋʟᴀᴍ┆ғʟᴏᴏᴅ 🔇
+┗❏⚡️›xᴀɴɪᴍʟᴀʀɪ ɴᴀʀᴀʜᴀᴛ ᴇᴛᴍᴇᴋ📵
+┗❏⚡️›ᴅɪɴ, ᴅɪʟ ᴠᴇ ıʀᴋ ᴀʏʀıᴍı❌
+
+✦ ᴍəʟᴜᴍᴀᴛ ✦
+✪━─━─━─━─━─━✪ 
+╭[️️ᴀᴅ]┣◉➨ {msg.from_user.mention}
+┣[️️ᴛ️️️️ᴀɢ ᴀᴅ‌]┣◉➨ @{message.from_user.username}
+┣[ᴛ️️ᴇʟᴇɢ‌ʀᴀᴍ ɪᴅ‌]┣◉➨ {msg.from_user.id}
+
+╰➥ xᴏş ꜱöʜʙəᴛʟəʀ.
+✪━─━─━─━─━─━✪
+
+╭──➤ {msg.from_use.mention}
+╰❏ ᴜsᴇʀ ᴅᴀsɪᴍᴀ!
+
+"""
+
 
 # Yeni istifadəçi mesajı
 @xaos.on(events.ChatAction)
 async def handler(event):
     if event.user_joined:
-        await event.reply(f"{random.choice(yeni_user)}")
+        await event.reply(f"{QARSİLAMA}")
         
 # Chatbot
 @xaos.on(events.NewMessage(pattern='(?i)bot+'))
