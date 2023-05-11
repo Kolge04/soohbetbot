@@ -4,7 +4,7 @@ import logging
 import asyncio
 from telethon import Button
 from telethon.sessions import StringSession
-from pyrogram.types import Message,InlineKeyboardButton, InlineKeyboardMarkup
+from pyrogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup
 from pyrogram import Client, filters
 from telethon.tl.types import ChannelParticipantsAdmins
 from telethon import TelegramClient, events
