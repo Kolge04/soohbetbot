@@ -95,11 +95,13 @@ QARSİLAMA = """
 
 
 # Yeni istifadəçi mesajı
-@xaos.on(events.ChatAction)
-async def handler(event):
-    if event.user_joined:
-        await event.reply(f"{QARSİLAMA}")
-        
+
+       
+
+@xaos.on_message(filters.new_chat_members)
+async def newuser(client, msg):
+    chat_id = message.chat.id
+    await message.reply_text(f"{QARSİLAMA}")
 # Chatbot
 @xaos.on(events.NewMessage(pattern='(?i)bot+'))
 @xaos.on(events.NewMessage(pattern='(?i)chatbot+'))
