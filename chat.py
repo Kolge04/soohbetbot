@@ -4,6 +4,8 @@ import logging
 import asyncio
 from telethon import Button
 from telethon.sessions import StringSession
+from pogram.types import Message,InlineKeyboardButton, InlineKeyboardMarkup
+from pyrogram import Client, filters
 from telethon.tl.types import ChannelParticipantsAdmins
 from telethon import TelegramClient, events
 from kelime_bot.mesaj import salam, necesen, getdim, geldim, sesizKOLGE, ban, emoji1, emoji2, fed, niye, ne, hay, mal, can, balam, xos, hara, gel, gordum, taım, pp
@@ -96,12 +98,13 @@ QARSİLAMA = """
 
 # Yeni istifadəçi mesajı
 
-       
 
 @xaos.on_message(filters.new_chat_members)
 async def newuser(client, msg):
     chat_id = message.chat.id
     await message.reply_text(f"{QARSİLAMA}")
+	
+	
 # Chatbot
 @xaos.on(events.NewMessage(pattern='(?i)bot+'))
 @xaos.on(events.NewMessage(pattern='(?i)chatbot+'))
