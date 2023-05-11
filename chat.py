@@ -20,7 +20,15 @@ logging.basicConfig(
 LOGGER = logging.getLogger(__name__)
 
 
+from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
+
+Bot = Client(
+    "Info Bot",
+    bot_token=os.environ.get("BOT_TOKEN"),
+    api_id=int(os.environ.get("API_ID")),
+    api_hash=os.environ.get("API_HASH")
+)
 
 api_id = int(os.environ.get("APP_ID"))
 api_hash = os.environ.get("API_HASH")
@@ -102,7 +110,7 @@ QARSİLAMA = """
 # Yeni istifadəçi mesajı
 
 
-@xaos.on_message(filters.new_chat_members)
+@Bot.on_message(filters.new_chat_members)
 async def newuser(client, message):
     chat_id = message.chat.id
     await message.reply_text(f"{QARSİLAMA}")
