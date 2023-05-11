@@ -3,7 +3,9 @@ import os
 import logging
 import asyncio
 from telethon import Button
-
+from pyrogram.errors import FloodWait
+from random import choice
+from pyrogram.types import Message
 from telethon.sessions import StringSession
 from pyrogram.types import Message
 from pyrogram import Client, filters
